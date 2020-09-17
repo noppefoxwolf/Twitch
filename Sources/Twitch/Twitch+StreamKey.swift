@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 public extension Twitch.Client {
-    func getStreamKey(broadcasterID: String) -> AnyPublisher<GetMe.Response, Error> {
+    func getStreamKey(broadcasterID: String) -> AnyPublisher<GetStreamKey.Response, Error> {
         self.get(path: "/helix/streams/key", params: ["broadcaster_id" : broadcasterID])
     }
     
